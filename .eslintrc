@@ -3,7 +3,6 @@
         "es6": true,
         "node": true
     },
-    "extends": "@hapi/eslint-config-hapi",
     "parserOptions": {
         "sourceType": "module",
         "ecmaVersion": 8

@@ -266,7 +266,7 @@ describe('plugin functionality', () => {
         expect(server.plugins['hapi-cron'].jobs.testcron).toBeDefined();
     });
 
-    it('should ensure the request and callback from the plugin options are triggered', async (done) => {
+    it('should ensure the request and callback from the plugin options are triggered', async () => {
 
         const onComplete = jest.fn();
         const server = new Hapi.Server();
@@ -297,7 +297,6 @@ describe('plugin functionality', () => {
 
             expect(request.method).toBe('get');
             expect(request.path).toBe('/test-url');
-            done();
         });
 
         expect(onComplete).not.toHaveBeenCalled();
